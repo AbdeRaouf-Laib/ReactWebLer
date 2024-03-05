@@ -1,7 +1,10 @@
 
 import './App.css';
 
+
+
 function App() {
+<<<<<<< HEAD
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +23,13 @@ function App() {
       </header>
     </div>
   );
+=======
+	return (
+		<div className="App">
+			
+		</div>
+	);
+>>>>>>> 18392c9 (update)
 }
 
 export default App;

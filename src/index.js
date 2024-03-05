@@ -2,12 +2,45 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+<<<<<<< HEAD
 
+=======
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Home from './pages/home'
+import About from './pages/about'
+import Skills from './pages/skills'
+import Contact from './pages/contact'
+>>>>>>> 18392c9 (update)
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>,
+    errorElement: <h1>Page Not Found!!!</h1>
+  },
+  {
+    path: "/about",
+    element: <About/>,
+    errorElement: <h1>Page Not Found!!!</h1>
+  },
+  {
+    path: "/skills",
+    element: <Skills/>,
+    errorElement: <h1>Page Not Found!!!</h1>
+  },
+  {
+    path: "/contact",
+    element: <Contact/>,
+    errorElement: <h1>Page Not Found!!!</h1>
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
