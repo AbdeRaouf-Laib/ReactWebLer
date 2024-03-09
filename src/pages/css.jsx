@@ -1,14 +1,12 @@
 
-import Header from '../components/header';
 import Footer from '../components/footer';
+import Header from '../components/header';
 import MainContent from '../components/mainContent';
-
-
-export default function Home() {
-    return (
+export default function Css() {
+    return(
         <>
             <Header />
-            <MainContent contentName="home"/>
+            <MainContent contentName="Css"/>
             <Footer/>
         </>
     )

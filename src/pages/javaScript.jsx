@@ -4,11 +4,13 @@ import Footer from '../components/footer';
 import MainContent from '../components/mainContent';
 
 
-export default function Home() {
-    return (
+export default function JavaScript() {
+    
+    return(
         <>
             <Header />
-            <MainContent contentName="home"/>
+            
+            <MainContent contentName="JavaScript"/>
             <Footer/>
         </>
     )

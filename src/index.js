@@ -2,39 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-<<<<<<< HEAD
-
-=======
+import Home from './pages/home';
+import JavaScript from './pages/javaScript';
+import Css from './pages/css';
+import Html from './pages/html';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './pages/home'
-import About from './pages/about'
-import Skills from './pages/skills'
-import Contact from './pages/contact'
->>>>>>> 18392c9 (update)
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
-    errorElement: <h1>Page Not Found!!!</h1>
+    element:<Home/>,
+    errorElement: <p>Sorry...!!!</p>
   },
   {
-    path: "/about",
-    element: <About/>,
-    errorElement: <h1>Page Not Found!!!</h1>
+    path: "/html",
+    element:<Html/>,
+    errorElement: <p>Sorry...!!!</p>
   },
   {
-    path: "/skills",
-    element: <Skills/>,
-    errorElement: <h1>Page Not Found!!!</h1>
+    path: "/css",
+    element:<Css/>,
+    errorElement: <p>Sorry...!!!</p>
   },
   {
-    path: "/contact",
-    element: <Contact/>,
-    errorElement: <h1>Page Not Found!!!</h1>
+    path: "/javascript",
+    element:<JavaScript/>,
+    errorElement: <p>Sorry...!!!</p>
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -44,7 +39,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-
+ 
