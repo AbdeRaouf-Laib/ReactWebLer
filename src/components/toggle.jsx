@@ -6,7 +6,7 @@ import { useState } from 'react';
 function Toggle() {
     const setDarkMode = () =>{
         document.querySelector("main").setAttribute("data-theme","dark")
-    };
+    }
     const setLightMode = () =>{
         document.querySelector("main").setAttribute("data-theme","light")
     };
