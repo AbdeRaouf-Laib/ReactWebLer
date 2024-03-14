@@ -1,20 +1,33 @@
 
 import React from "react";
 import './toggle.css'
-import { useState } from 'react';
+import { useState,useReducer } from 'react';
+import { type } from "@testing-library/user-event/dist/type";
 
+    const reducer = (Mode,action) =>{
+        switch(action.type){
+            case "lightMode":
+                return {mode: "dark"};
+            case "darkMode":
+                return {mode: "light"};
+            default:
+                return {mode: "light"}
+        }
+    }
 function Toggle() {
+
+    const [Mode,deispatch] = useReducer(reducer,{mode: "light"})
     const setDarkMode = () =>{
-        document.querySelector("main").setAttribute("data-theme","dark")
+        document.querySelector("main").setAttribute("data-theme",Mode.mode)
     }
     const setLightMode = () =>{
-        document.querySelector("main").setAttribute("data-theme","light")
+        document.querySelector("main").setAttribute("data-theme",Mode.mode)
     };
     const toggleF = e => {
         if(e.target.checked)
-            setDarkMode()
+           deispatch({type: "lightMode"})
         else 
-            setLightMode();
+            deispatch({type: "darkMode"})
     }
     return (
         <div className="toggle">
