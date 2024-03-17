@@ -44,7 +44,7 @@ export default function TopBar({open,handleDrawerOpen}){
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+            Hi
           </Typography>
         </Toolbar>
       </AppBar>
